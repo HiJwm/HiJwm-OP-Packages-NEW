@@ -28,6 +28,7 @@ jobs:
     - name: Update
       run: |
 
+        rm -rf !(.github/workflows | README.md) 
         rm -rf ./luci-app-pushbot
         rm -rf ./luci-app-serverchan
         rm -rf ./luci-app-easymesh
