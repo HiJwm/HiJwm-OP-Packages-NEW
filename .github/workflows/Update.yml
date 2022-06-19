@@ -30,44 +30,7 @@ jobs:
 
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "README.md"` >/dev/null 2>&1
-        rm -rf ./luci-app-pushbot
-        rm -rf ./luci-app-serverchan
-        rm -rf ./luci-app-easymesh
-        rm -rf ./luci-app-ikoolproxy
-        rm -rf ./luci-app-kodexplorer
-        rm -rf ./theme-18.06/luci-theme-edge
-        rm -rf ./theme-18.06/luci-theme-infinityfreedom
-        rm -rf ./theme-18.06/luci-theme-neobird
-        rm -rf ./lisaac/*  
-        rm -rf ./linkease/app-store-ui
-        rm -rf ./linkease/ddnsto
-        rm -rf ./linkease/linkease
-        rm -rf ./linkease/quickstart
-        rm -rf ./linkease/luci-app-ddnsto
-        rm -rf ./linkease/luci-app-linkease
-        rm -rf ./linkease/luci-app-quickstart
-        rm -rf ./linkease/luci-app-store
-        rm -rf ./linkease/luci-app-ota
-        rm -rf ./jerrykuku/*
-        rm -rf ./op-oaf
-        rm -rf ./op-fileBrowser/*
-        rm -rf ./op-aliyun/*
-        rm -rf ./op-socat/socat
-        rm -rf ./op-mosdns/*
-        rm -rf ./op-alist
-        rm -rf ./patch/wall
-        rm -rf ./patch/wall-luci
-        
-        ##自修改
-        rm -rf ./op-adguardhome
-        rm -rf ./path/autocore
-        rm -rf ./theme
-        rm -rf ./luci-app-vssr
-        rm -rf ./lua-maxminddb
-        rm -rf ./luci-app-jd-dailybonus
-        rm -rf ./files
-        
- 
+         
         git clone https://github.com/zzsj0928/luci-app-pushbot ./luci-app-pushbot
         git clone https://github.com/tty228/luci-app-serverchan ./luci-app-serverchan
         git clone https://github.com/ntlf9t/luci-app-easymesh ./luci-app-easymesh
@@ -103,9 +66,9 @@ jobs:
         svn export https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom ./theme/luci-theme-infinityfreedom-18.06
         #git clone https://github.com/kiddin9/luci-theme-edge -b 18.06 ./theme/luci-theme-edge-18.06 
         #git clone https://github.com/xiangfeidexiaohuo/luci-theme-neobird ./theme/luci-theme-neobird-18.06                         
-        git clone https://github.com/jerrykuku/luci-theme-argon ./theme/luci-theme-argon
-        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon ./theme/luci-theme-argon-18.06
-        git clone https://github.com/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
+        #git clone https://github.com/jerrykuku/luci-theme-argon ./theme/luci-theme-argon
+        #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon ./theme/luci-theme-argon-18.06
+        #git clone https://github.com/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
         svn export https://github.com/281677160/openwrt-package/trunk/luci-theme-opentomcat ./theme/luci-theme-opentomcat
         
         svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser ./op-fileBrowser/filebrowser
@@ -141,7 +104,7 @@ jobs:
         git clone https://github.com/kiddin9/luci-app-dnsfilter ./luci-app-dnsfilter
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-eqos ./luci-app-eqos
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-iperf3-server ./luci-app-iperf3-server
-        git clone https://github.com/sirpdboy/luci-app-netdata .luci-app-netdata
+        git clone https://github.com/sirpdboy/luci-app-netdata ./luci-app-netdata
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-syncdial ./luci-app-syncdial
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-cpulimit ./op-cpulimit
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-homebox ./op-homebox
