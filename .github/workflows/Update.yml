@@ -67,9 +67,9 @@ jobs:
         svn export https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom/trunk/luci-theme-infinityfreedom ./theme/luci-theme-infinityfreedom-18.06
         #git clone https://github.com/kiddin9/luci-theme-edge -b 18.06 ./theme/luci-theme-edge-18.06 
         #git clone https://github.com/xiangfeidexiaohuo/luci-theme-neobird ./theme/luci-theme-neobird-18.06                         
-        svn co https://github.com/jerrykuku/luci-theme-argon ./theme/luci-theme-argon
-        #svn co https://github.com/jerrykuku/trunk/luci-theme-argon/18.06 ./theme/luci-theme-argon-18.06
-        svn co https://github.com/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
+        svn export https://github.com/jerrykuku/luci-theme-argon ./theme/luci-theme-argon
+        svn export https://github.com/jerrykuku/trunk/luci-theme-argon/18.06 ./theme/luci-theme-argon-18.06
+        svn export https://github.com/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
         
         #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
         #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-theme-argon-18.06 ./theme/luci-theme-argon-18.06
@@ -86,8 +86,8 @@ jobs:
         svn export https://github.com/messense/aliyundrive-fuse/trunk/openwrt/luci-app-aliyundrive-fuse ./op-aliyun/luci-app-aliyundrive-fuse
 
         ## wall相关
-        svn co https://github.com/xiaorouji/openwrt-passwall ./patch/wall
-        svn co https://github.com/coolsnowwolf/packages/trunk/net/redsocks2 ./patch/wall/redsocks2
+        svn export https://github.com/xiaorouji/openwrt-passwall ./patch/wall
+        svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2 ./patch/wall/redsocks2
         #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/patch/wall ./patch/wall
         svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./patch/wall-luci/luci-app-passwall
         svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus ./patch/wall-luci/luci-app-ssr-plus
