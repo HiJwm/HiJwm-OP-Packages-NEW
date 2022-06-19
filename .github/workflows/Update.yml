@@ -88,7 +88,7 @@ jobs:
         svn export https://github.com/kiddin9/openwrt-bypass/trunk/luci-app-bypass ./patch/wall-luci/luci-app-bypass
         svn checkout https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash ./patch/wall-luci/luci-app-openclash
         
-        svn export https://github.com/coolsnowwolf/packages/trunk/net/socat ./op-socat/socat
+        svn export https://github.com/coolsnowwolf/packages/trunk/net/socat ./op-socat/
         git clone https://github.com/sbwml/luci-app-mosdns ./op-mosdns/
         git clone https://github.com/jjm2473/openwrt-alist ./op-alist/
         
