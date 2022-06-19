@@ -122,7 +122,7 @@ jobs:
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/patch/opkg ./patch/opkg
         
         ##缺少luci-lip-ipkg，添加以下代码
-        svn co https://github.com/xiangfeidexiaohuo/op-ipkg ./op-ipkg
+        svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./op-ipkg
     
     - name: 删除多余文件
       run: |
