@@ -63,7 +63,7 @@ jobs:
         rm -rf ./luci-app-vssr
         rm -rf ./lua-maxminddb
         rm -rf ./luci-app-jd-dailybonus
-        
+        rm -rf ./files
         
  
         git clone https://github.com/zzsj0928/luci-app-pushbot ./luci-app-pushbot
@@ -130,6 +130,24 @@ jobs:
         ##自修改
         git clone https://github.com/kiddin9/openwrt-adguardhome ./op-adguardhome
         svn co https://github.com/HiJwm/MySettings/trunk/lean/myautocore ./patch/autocore   
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/files ./files
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/homelede ./homelede
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease ./linkease
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-advanced ./luci-app-advanced
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-aria2 ./luci-app-aria2
+        git clone https://github.com/sirpdboy/luci-app-autotimeset ./luci-app-autotimeset
+        git clone https://github.com/kiddin9/luci-app-dnsfilter ./luci-app-dnsfilter
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-eqos ./luci-app-eqos
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-iperf3-server ./luci-app-iperf3-server
+        git clone https://github.com/sirpdboy/luci-app-netdata .luci-app-netdata
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-syncdial ./luci-app-syncdial
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-cpulimit ./op-cpulimit
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-homebox ./op-homebox
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-lingti ./op-lingti
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-smartdns ./op-smartdns
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-webdav ./op-webdav
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/speedtestpp ./speedestpp
+        
     
     - name: 删除多余文件
       run: |
