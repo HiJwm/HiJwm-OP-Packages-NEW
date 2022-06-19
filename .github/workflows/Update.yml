@@ -69,7 +69,7 @@ jobs:
         #git clone https://github.com/xiangfeidexiaohuo/luci-theme-neobird ./theme/luci-theme-neobird-18.06                         
         svn export https://github.com/jerrykuku/luci-theme-argon/trunk ./theme/luci-theme-argon
         svn checkout https://github.com/jerrykuku/luci-theme-argon/branches/18.06 ./theme/luci-theme-argon-18.06
-        svn export https://github.com/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
+        svn export https://github.com/jerrykuku/luci-app-argon-config/trunk ./theme/luci-app-argon-config
         
         #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
         #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-theme-argon-18.06 ./theme/luci-theme-argon-18.06
