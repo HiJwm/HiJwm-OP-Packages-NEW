@@ -28,7 +28,8 @@ jobs:
     - name: Update
       run: |
 
-        rm -rf !(.github/workflows | README.md) 
+        git rm -r --cache * >/dev/null 2>&1 &
+        rm -rf `find ./* -maxdepth 0 -type d ! -name "README.md"` >/dev/null 2>&1
         rm -rf ./luci-app-pushbot
         rm -rf ./luci-app-serverchan
         rm -rf ./luci-app-easymesh
