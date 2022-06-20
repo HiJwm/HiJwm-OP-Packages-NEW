@@ -12,6 +12,7 @@
 <img src="https://v2.jinrishici.com/one.svg?font-size=24&spacing=2&color=Red">
 
 #### OpenWrt插件库
+#感谢 [xiangfeidexiaohuo](https://github.com/xiangfeidexiaohuo/openwrt-packages)以及为以下插件做出贡献的开发者。
 
 | 插件 | 说明 |
 | :----: | :----: |
