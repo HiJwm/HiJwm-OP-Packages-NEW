@@ -69,6 +69,7 @@ jobs:
         #git clone https://github.com/xiangfeidexiaohuo/luci-theme-neobird ./theme/luci-theme-neobird-18.06                         
         svn export https://github.com/jerrykuku/luci-theme-argon/trunk ./theme/luci-theme-argon
         svn checkout https://github.com/jerrykuku/luci-theme-argon/branches/18.06 ./theme/luci-theme-argon-18.06
+        ##注意下面特别格式
         svn export https://github.com/jerrykuku/luci-app-argon-config/trunk ./theme/luci-app-argon-config
         
         #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-app-argon-config ./theme/luci-app-argon-config
@@ -107,7 +108,7 @@ jobs:
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/homelede ./homelede
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease ./linkease
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-advanced ./luci-app-advanced
-        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-aria2 ./luci-app-aria2
+        #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-aria2 ./luci-app-aria2
         git clone https://github.com/sirpdboy/luci-app-autotimeset ./luci-app-autotimeset
         git clone https://github.com/kiddin9/luci-app-dnsfilter ./luci-app-dnsfilter
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-eqos ./luci-app-eqos
@@ -122,6 +123,8 @@ jobs:
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/speedtestpp ./speedestpp
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/patch/opkg ./patch/opkg
         git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic ./luci-app-unblockneteasemusic/
+        
+        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/patch/luci-app-turboacc ./luci-app-turboacc
         
         ##缺少luci-lip-ipkg，添加以下代码
         svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./op-ipkg
