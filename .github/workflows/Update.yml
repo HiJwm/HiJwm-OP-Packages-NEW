@@ -126,6 +126,8 @@ jobs:
         
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/patch/luci-app-turboacc ./luci-app-turboacc
         
+        git clone https://github.com/sirpdboy/luci-app-cupsd ./op-cups/
+        
         ##缺少luci-lip-ipkg，添加以下代码
         svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./op-ipkg
     
