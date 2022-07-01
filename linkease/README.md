@@ -10,17 +10,17 @@ https://github.com/linkease/nas-packages
 
 * QuickStart便捷首页截图欣赏：
 
-![jpg](./pic/1.png)
+![jpg](./preview/1.png)
 
-![jpg](./pic/2.png)
+![jpg](./preview/2.png)
 
 
 * iStore截图欣赏：
 
-![jpg](./pic/3.png)
+![jpg](./preview/3.png)
 
 
 
 * 本人编译的带QuickStart便捷首页和iStore的固件：
-[OpenWrt+R2203-X86_64-精简版多内核](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=7182055&page=1&extra=)
+[R2203-X86_64-精简版多内核](https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=7182055&page=1&extra=)
 
