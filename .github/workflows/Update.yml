@@ -104,7 +104,6 @@ jobs:
         ##自修改
         git clone https://github.com/kiddin9/openwrt-adguardhome ./op-adguardhome
         svn co https://github.com/HiJwm/MySettings/trunk/lean/myautocore ./patch/autocore   
-        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/files ./files
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/homelede ./homelede
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease ./linkease
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-advanced ./luci-app-advanced
