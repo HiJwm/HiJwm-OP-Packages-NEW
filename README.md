@@ -50,9 +50,4 @@
 | speedtestpp | 终端测网速 |
 
 
-#### files-补充汉化(仅适合Lean源码)
-
-udpxy.lua替换到feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi
-
-mwan3.po替换到feeds/luci/applications/luci-app-mwan3/po/zh-cn
 
