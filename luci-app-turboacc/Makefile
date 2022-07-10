@@ -1,7 +1,7 @@
 # SPDX-Identifier-License: GPL-3.0-only
 #
-# Copyright (C) 2018 Lean <coolsnowwolf@gmail.com>
-# Copyright (C) 2019-2021 ImmortalWrt.org
+# Copyright (C) 2022 Lean <coolsnowwolf@gmail.com>
+# Copyright (C) 2019-2022 ImmortalWrt.org
 
 include $(TOPDIR)/rules.mk
 
@@ -9,7 +9,7 @@ PKG_NAME:=luci-app-turboacc
 PKG_RELEASE:=$(COMMITCOUNT)
 
 PKG_LICENSE:=GPL-3.0-only
-PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
+PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org> & Lean <coolsnowwolf@gmail.com>
 
 PKG_CONFIG_DEPENDS:= \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_BBR_CCA \
@@ -45,6 +45,7 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_SHORTCUT_FE_CM
 config PACKAGE_$(PKG_NAME)_INCLUDE_BBR_CCA
 	bool "Include BBR CCA"
 	default y
+	
 endef
 
 include $(TOPDIR)/feeds/luci/luci.mk

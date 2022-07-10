@@ -25,6 +25,18 @@ inital_conf(){
 	[ ! -e "/lib/modules/$(uname -r)/xt_FULLCONENAT.ko" ] && fullcone_nat="0"
 }
 
+load_sfe() {
+	local kernel_version=$(uname -r)
+
+	[ -e "/lib/modules/$kernel_version/shortcut-fe-cm.ko" ] && modprobe shortcut-fe-cm && echo 1 && return
+	
+	[ -e "/lib/modules/$kernel_version/fast-classifier.ko" ] && modprobe fast-classifier
+}
+
+unload_sfe() {
+	[ -d /sys/module/shortcut_fe_cm ] && rmmod shortcut_fe_cm 
+	[ -d /sys/module/fast_classifier ] && rmmod fast_classifier
+}
 
 start(){
 	inital_conf
@@ -33,23 +45,15 @@ start(){
 	uci set firewall.@defaults[0].flow_offloading_hw="${hw_flow}"
 	uci set firewall.@defaults[0].fullcone="${fullcone_nat}"
 	uci commit firewall
-
+	
 	/etc/init.d/turboacc_fss start
 
 	[ "${sw_flow}" -eq "0" ] && [ "${hw_flow}" -eq "1" ] && {
 		lsmod | grep -q mtkhnat || modprobe mtkhnat
 	}
 
-	[ "${sw_flow}" -ne "1" ] && {
-		[ "${sfe_flow}" -eq "1" ] && {
-				/etc/init.d/shortcut-fe enabled || /etc/init.d/shortcut-fe enable
-				/etc/init.d/shortcut-fe start
-		}
-		[ "${sfe_flow}" -eq "0" ] && [ -e "/etc/init.d/shortcut-fe" ] && \
-		/etc/init.d/shortcut-fe enabled && {
-			/etc/init.d/shortcut-fe stop 2>"/dev/null"
-			/etc/init.d/shortcut-fe disable
-		}
+	[ "${sw_flow}" -ne "1" ] && [ "${sfe_flow}" -eq "1" ] && {
+		load_sfe
 	}
 
 	if [ "${bbr_cca}" -eq "1" ];  then
@@ -75,12 +79,7 @@ stop(){
 		lsmod | grep -q mtkhnat && rmmod mtkhnat
 	}
 
-	[ "${sfe_flow}" -ne "1" ] && {
-		[ -e "/etc/init.d/shortcut-fe" ] && {
-			/etc/init.d/shortcut-fe stop 2>"/dev/null"
-			/etc/init.d/shortcut-fe enabled && /etc/init.d/shortcut-fe disable
-		}
-	}
+	unload_sfe
 
 	if [ "${restart_utils}" = "true" ]; then
 		/etc/init.d/firewall restart >"/dev/null" 2>&1
@@ -112,8 +111,8 @@ check_status(){
 		elif [ -d /sys/kernel/debug/ecm/ecm_sfe_ipv4 ]; then
 			echo -n "QCA-ECM-SFE"
 			exit 0
-		elif lsmod | grep -q "shortcut_fe_cm"; then
-			echo -n "Shortcut-FE"
+		elif [ -n "$(lsmod | grep shortcut_fe_cm)" ]; then
+			echo -n "Shortcut-FE ECM"
 			exit 0
 		else
 			exit 1
@@ -132,4 +131,3 @@ check_status(){
 		;;
 	esac
 }
-
