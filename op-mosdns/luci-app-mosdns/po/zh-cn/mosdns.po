@@ -28,6 +28,12 @@ msgstr "将 Dnsmasq 域名解析请求转发到 MosDNS 服务器"
 msgid "Enable DNS ADblock"
 msgstr "启用 DNS 广告过滤"
 
+msgid "Reload Service"
+msgstr "重载服务"
+
+msgid "Reload service to take effect of new configuration"
+msgstr "重载 MosDNS 服务生效配置文件"
+
 msgid "<font color=\"ff0000\"><strong>View the Custom YAML Configuration file used by this MosDNS. You can edit it as you own need.</strong></font>"
 msgstr "<font color=\"ff0000\"><strong>注意！此页的更改仅当配置文件为 “自定义” 时才会生效</strong></font>"
 
@@ -91,6 +97,12 @@ msgstr "日志文件"
 msgid "Remote DNS"
 msgstr "远程 DNS"
 
+msgid "Remote DNS Connection Multiplexing"
+msgstr "远程 DNS 连接复用"
+
+msgid "Enable TCP/DoT RFC 7766 new Query Pipelining connection multiplexing mode"
+msgstr "启用 TCP/DoT RFC 7766 新型 Query Pipelining 连接复用模式"
+
 msgid "DNS Cache Size"
 msgstr "DNS 缓存大小（条）"
 
@@ -122,13 +134,19 @@ msgid "White Lists"
 msgstr "白名单"
 
 msgid "These domain names allow DNS resolution with the highest priority. Please input the domain names of websites, every line can input only one website domain. For example: hm.baidu.com."
-msgstr "加入的域名始终允许 DNS 解析，且优先级最高（每个域名一行，支持域名匹配规则）"
+msgstr "加入的域名始终允许使用 “本地 DNS” 进行解析，且优先级最高（每个域名一行，支持域名匹配规则）"
 
 msgid "Block Lists"
 msgstr "黑名单"
 
 msgid "These domains are blocked from DNS resolution. Please input the domain names of websites, every line can input only one website domain. For example: baidu.com."
 msgstr "加入的域名将屏蔽 DNS 解析（每个域名一行，支持域名匹配规则）"
+
+msgid "Grey Lists"
+msgstr "灰名单"
+
+msgid "These domains are always resolved using remote DNS. Please input the domain names of websites, every line can input only one website domain. For example: google.com."
+msgstr "加入的域名始终使用 “远程 DNS” 进行解析（每个域名一行，支持域名匹配规则）"
 
 msgid "Hosts For example: baidu.com 10.0.0.1"
 msgstr "自定义 Hosts 重写，如：baidu.com 10.0.0.1（每个规则一行）"
