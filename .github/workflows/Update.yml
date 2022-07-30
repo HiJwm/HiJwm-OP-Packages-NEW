@@ -120,7 +120,6 @@ jobs:
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-smartdns ./op-smartdns
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-webdav ./op-webdav
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/speedtestpp ./speedtestpp
-        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/patch/opkg ./patch/opkg
         git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic ./luci-app-unblockneteasemusic/
         
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/patch/luci-app-turboacc ./luci-app-turboacc
