@@ -116,7 +116,6 @@ jobs:
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/luci-app-syncdial ./luci-app-syncdial
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-cpulimit ./op-cpulimit
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-homebox ./op-homebox
-        svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-lingti ./op-lingti
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-smartdns ./op-smartdns
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/op-webdav ./op-webdav
         svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/speedtestpp ./speedtestpp
