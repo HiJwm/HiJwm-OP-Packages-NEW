@@ -40,7 +40,7 @@ o:depends("dial_type","2")
 o=s:option(Flag,"bindwan2","绑定物理接口","第二条线生成的虚拟接口绑定当前物理接口")
 o.rmempty=false
 o:depends("dial_type","2")
-o=s:option(Flag,"dialchk","启用掉线检测")
+o=s:option(Flag,"dialchk","启用掉线检测","一般不建议开启此选项，开启此选项后，反而可能不成功。")
 o.rmempty=false
 o=s:option(Value,"dialnum","最低在线接口数量","如果在线接口数量小于这个值则重拨。(每个ipv6也算一个接口)")
 o.datatype="range(0,248)"

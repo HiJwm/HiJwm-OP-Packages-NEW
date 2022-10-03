@@ -2,7 +2,7 @@
 config syncdial 'config'
 	option syncon '1'
 	option dialwait '25'
-	option dialchk '1'
+	option dialchk '0'
 	option nomwan '0'
 	option wanselect 'wan'
 	option dial_type '2'
