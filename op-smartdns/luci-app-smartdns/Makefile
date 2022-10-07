@@ -6,8 +6,8 @@ include $(TOPDIR)/rules.mk
 
 PKG_LICENSE:=GPL-3.0-or-later
 PKG_MAINTAINER:=Nick Peng <pymumu@gmail.com>
-PKG_VERSION:=2020.09.08
-PKG_RELEASE:=2235
+PKG_VERSION:=2022.38
+PKG_RELEASE:=1
 
 LUCI_TITLE:=LuCI for smartdns
 LUCI_DESCRIPTION:=Provides Luci for smartdns
